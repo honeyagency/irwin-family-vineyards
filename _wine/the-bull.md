@@ -3,8 +3,8 @@ layout: wine
 year: 2014
 title: The Bull
 sub:
-bg-image: app/images/tempranillo.jpg
-color-image: app/images/wine--the-bull.jpg
+bg-image: /app/images/tempranillo.jpg
+color-image: /app/images/wine--the-bull.jpg
 intro:
     title:
     content:
@@ -19,7 +19,7 @@ tec:
     accolades:
     pairing:
     cents:
-image: app/images/bottle--the-bull .png
+image: /app/images/bottle--the-bull.jpg
 price:
 club:
 techsheet:

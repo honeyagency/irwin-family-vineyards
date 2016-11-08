@@ -1,0 +1,19 @@
+.block--wine-cta {
+    padding: 70vw 0 2em 0;
+
+@include media($screen-sm) {
+        padding: 45vw 0 2em 0;
+    }
+    @include media($screen-md) {
+        padding: 35vw 0 2em 0;
+    }
+
+
+    @include media($max-sm) {
+        .button {
+            // background-color: map-get($brown, light);
+            // color: $black;
+            // border: 0;
+        }
+    }
+}

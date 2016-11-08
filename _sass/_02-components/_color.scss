@@ -1,0 +1,32 @@
+.color--white {
+    color: white;
+
+    svg {
+        path {
+            fill: white;
+        }
+    }
+}
+
+.color--black {
+    color: $black;
+
+    svg {
+        path {
+            fill: $black;
+        }
+    }
+}
+
+.color--brown-light {
+    color: map-get($brown, light);
+
+    svg {
+        path {
+            fill: map-get($brown, light);
+        }
+    }
+}
+.color--red-dark {
+    color: map-get($red, dark);
+}

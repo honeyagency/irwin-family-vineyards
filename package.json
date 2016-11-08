@@ -1,0 +1,28 @@
+{
+  "name": "irwin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cssnano": "*",
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-cssnano": "*",
+    "grunt-grunticon": "^2.3.0",
+    "grunt-jekyll": "^0.4.4",
+    "grunt-notify": "*",
+    "grunt-postcss": "^0.8.0",
+    "grunt-svgmin": "*",
+    "postcss-convert-values": "^2.3.4",
+    "postcss-font-magician": "^1.4.0"
+  }
+}

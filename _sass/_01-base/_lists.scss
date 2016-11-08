@@ -1,0 +1,55 @@
+ul, ol, menu, dir {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    &%default-ul {
+        list-style-type: disc;
+        margin-bottom: $small-spacing;
+        padding-left: $base-spacing / 1.1;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        -ms-word-break: break-all;
+        word-break: break-all;
+        word-break: break-word;
+        -ms-hyphens: auto;
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        hyphens: auto;
+
+        @include media($screen-sm) {
+            padding-left: $base-spacing;
+        }
+    }
+
+    &%default-ol {
+        list-style-type: decimal;
+        margin-bottom: $small-spacing;
+        padding-left: $base-spacing / 1.1;
+
+        @include media($screen-sm) {
+            padding-left: $base-spacing;
+        }
+    }
+}
+
+dl {
+    margin-bottom: $small-spacing;
+
+    dt {
+        font-weight: bold;
+        margin-top: $small-spacing;
+    }
+
+    dd {
+        margin: 0;
+    }
+}
+
+ul, dir, menu {
+    @extend %default-ul;
+}
+
+ol {
+    @extend %default-ol;
+}

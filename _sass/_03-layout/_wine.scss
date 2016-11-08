@@ -1,0 +1,116 @@
+.layout--wine {
+    .tec {
+        h4 {
+            line-height: 2.5;
+        }
+    }
+
+    .section--wine-content {
+        @include media($screen-sm) {
+            justify-content: space-between;
+
+            h2 {
+                &:first-of-type {
+                    margin-bottom: 0.5em;
+                    font-size: 2.1rem;
+                    letter-spacing: 1px;
+                    line-height: 1;
+                }
+            }
+        }
+
+
+        @include media($screen-lg) {
+            justify-content: center;
+        }
+    }
+
+    .wine-spec {
+        margin-top: .3em;
+        margin-bottom: .3em;
+
+        @include media($max-sm) {
+            // font-size: 0.8rem;
+        }
+    }
+
+    // @include media($screen-sm){
+    .section--cents {
+        position: relative;
+
+        .block--stamp {
+            position: absolute;
+            z-index: 0;
+            opacity: 0.1;
+            top: 20px;
+        }
+
+        .quote {
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    .section--wine-specs {
+        flex-basis: 100%;
+
+        @include media($max-sm) {
+            order: 2;
+        }
+
+
+        @include media($screen-xs) {}
+
+
+        @include media($screen-sm) {
+            font-size: .8em;
+            flex-basis: 100% / 1.4 * 0.952;
+        }
+
+
+        @include media($screen-md) {
+            flex-basis: 100% / 1.5 * 0.952;
+            font-size: 1em;
+        }
+
+
+        @include media($screen-lg) {}
+
+
+        @include media($screen-xl) {}
+    }
+
+    .section--wine-image {
+        flex-basis: 100%;
+
+        @include media($max-sm) {
+            order: 1;
+        }
+
+
+        @include media($screen-sm) {
+            flex-basis: 100% / 3 * 0.952;
+        }
+
+
+        .wine--bottle {
+            @include media($max-lg) {
+                width: 140px;
+            }
+
+
+            @include media($max-md) {
+                width: 90px;
+            }
+
+
+            @include media($max-sm) {
+                width: 90px;
+            }
+        }
+
+        .pricing {
+            padding-top: 1.5em;
+        }
+    }
+}

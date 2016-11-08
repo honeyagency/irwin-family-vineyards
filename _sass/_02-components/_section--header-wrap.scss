@@ -1,0 +1,59 @@
+.section--header-wrap {
+  
+    justify-content: space-between;
+
+    @include media($screen-sm) {
+        justify-content: center;
+
+        nav {
+            ul {
+                padding: 0;
+
+                li {
+                    margin-left: 1em;
+
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+
+                    a {}
+                }
+            }
+        }
+    }
+
+
+    @include media($screen-md) {
+        justify-content: space-between;
+
+        nav {
+            ul {
+                font-size: 1rem;
+            }
+        }
+    }
+
+
+    @include media($screen-lg) {
+        nav {
+            ul {
+                font-size: inherit;
+            }
+        }
+    }
+
+
+    @include media($max-md) {
+        font-size: 0.9em;
+    }
+
+
+    @include media($max-sm) {
+        font-size: 1em;
+    }
+
+
+    .logo--link {
+        display: inherit;
+    }
+}

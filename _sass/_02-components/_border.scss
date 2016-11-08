@@ -1,0 +1,9 @@
+.border--right-1 {
+    @include media($screen-sm) {
+        border-right: 1px solid map-get($green, faded);
+    }
+}
+
+.border--left-1 {
+    border-left: 1px solid map-get($green, faded);
+}

@@ -1,0 +1,38 @@
+.trigger--nav-wrap {
+    width: 14px;
+
+    .trigger--nav {
+        width: 100%;
+        position: relative;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        tap-highlight-color: transparent;
+
+        &:after {
+            transition: width 0.3s $base-animation;
+            content: '';
+            position: absolute;
+            width: 0%;
+            background-color: $black;
+            height: 1px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}
+
+body {
+    @include media($max-sm) {
+        &.open {
+            .trigger--nav-wrap {
+                .trigger--nav {
+                    &:after {
+                        width: 100%;
+                        transition: width 0.3s $base-animation;
+                    }
+                }
+            }
+        }
+    }
+}

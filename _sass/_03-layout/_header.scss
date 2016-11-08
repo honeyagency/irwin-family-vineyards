@@ -1,0 +1,33 @@
+header {
+    padding-top: 1em;
+    padding-bottom: 0.1em;
+
+    .icon-logo {
+        margin-bottom: 0.5em;
+        width: 290px;
+        height: 18px;
+
+        @include media($screen-sm) {}
+
+
+        @include media($screen-md) {
+            width: 240px;
+            height: 17px;
+            margin-bottom: 0;
+        }
+
+
+        @include media($screen-lg) {
+            width: 290px;
+            height: 18px;
+        }
+
+
+        @include media($screen-xl) {}
+
+
+        @include media($screen-lg) {
+            margin: 0;
+        }
+    }
+}

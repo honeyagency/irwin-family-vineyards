@@ -1,0 +1,139 @@
+.bg--image {
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &.cover {
+        background-size: cover;
+    }
+
+    &.right {
+        background-position: right 20px;
+        background-size: contain;
+    }
+
+    h1 {
+        @include media($screen-sm) {
+            font-size: 9rem;
+            margin-top: 15px;
+            margin-bottom: -40px;
+            line-height: 1;
+        }
+    }
+
+    &.header {
+        min-height: 380px;
+
+        @include media($screen-sm) {
+            min-height: 380px;
+        }
+
+
+        @include media($screen-md) {
+            min-height: 500px;
+        }
+
+
+        @include media($screen-lg) {
+            min-height: 580px;
+        }
+
+
+        @include media($max-sm) {
+            font-size: .7em;
+
+            h1 {
+                margin: 0;
+                line-height: 1;
+                margin-bottom: -0.4em;
+            }
+
+            div {
+                font-size: 1.7em;
+            }
+        }
+
+
+        * {
+            z-index: 1;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: transparentize(black, 0.75);
+            z-index: 0;
+        }
+    }
+
+    &.wine {
+        &:after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 0;
+            background-color: transparentize(map-get($red, dark), 0.25);
+            mix-blend-mode: multiply;
+        }
+
+        h1 {
+            font-size: 1.6rem;
+
+            @include media($screen-sm) {
+                font-size: 4rem;
+                margin-bottom: -10px;
+            }
+
+
+            @include media($screen-md) {
+                font-size: 5rem;
+                margin-bottom: -15px;
+            }
+
+
+            @include media($screen-lg) {
+                font-size: 7rem;
+                margin-bottom: -25px;
+            }
+        }
+
+        @include media($max-sm) {
+            min-height: 200px;
+        }
+    }
+
+    position: relative;
+}
+
+.dsk--hide {
+    @include media($screen-sm) {
+        display: none !important;
+    }
+}
+
+.mobile--hide {
+    @include media($max-sm) {
+        display: none !important;
+    }
+}
+
+.bg--bull {
+    background-image: url("/app/images/bg--bull.png");
+    background-position: center;
+    background-size: 10em;
+    background-repeat: no-repeat;
+}
+
+.margin--center {
+    margin: 0 auto;
+    display: block;
+}

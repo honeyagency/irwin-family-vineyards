@@ -1,0 +1,128 @@
+---
+layout: default
+---
+<section class="{% if page.bg-image %}bg--image{% endif %} header wine margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" {% if page.bg-image %}style="background-image: url('{{page.bg-image}}');"{% endif %}>
+{% if page.year %}
+	<div class="font--sans text--uppercase font--larger">{{page.year}}</div>
+{% endif %}
+{% if page.title %}
+	<h1>{{page.title}}</h1>
+{% endif %}
+{% if page.sub %}
+	<div class="font--sans text--uppercase font--larger">{{page.sub}}</div>
+{% endif %}
+</section>
+<section class="section--wine-content flex flex-wrap spacing--gutter justify--center spacing--vert-2 spacing--dsk-vert-4">
+<div class="section--wine-specs spacing--vert-1 spacing--horiz-1  flex flex-wrap border--right-1 tec justify--between">
+	{% if page.intro.title %}
+		<h2 class="font--kp condensed text--uppercase color--red-dark wine--title">{{page.intro.title}}</h2>
+	{% endif %}
+	{% if page.intro.content %}
+		<p class="font--sans font--large">{{page.intro.content}}</p>
+	{% endif %}
+	<hr class="margin--bot-2">
+	<div class="grid--one flex flex-wrap justify--between">
+		{% if page.tec.tasting %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Tasting Notes</h4>
+				<div class="font--sans">{{page.tec.tasting}}</div>
+			</div>
+		{% endif %}
+		{% if page.tec.appellation %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Appellation</h4>
+				<div class="font--sans">{{page.tec.appellation}}</div>
+			</div>
+		{% endif %}
+		{% if page.tec.varietal %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Varietal</h4>
+				{% for varietal in page.tec.varietal %}
+					<div class="font--sans">{{varietal}}</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+		{% if page.tec.alcohol %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Alcohol</h4>
+				<p class="font--sans">{{page.tec.alcohol}}</p>
+			</div>
+		{% endif %}
+	<!-- 	</div>
+	<div class="grid--half"> -->
+		{% if page.tec.vineyards %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Vineyards</h4>
+				{% for vineyard in page.tec.vineyards %}
+					<div class="font--sans">{{vineyard}}</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+		{% if page.tec.cases %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Cases</h4>
+				<div class="font--sans">{{page.tec.cases}} Cases Produced</div>
+			</div>
+		{% endif %}
+		{% if page.tec.barrel %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Barrel Composition</h4>
+				<div class="font--sans">{{page.tec.barrel}}</div>
+			</div>
+		{% endif %}
+		{% if page.tec.accolades %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Accolades</h4>
+				
+				{% for accolades in page.tec.accolades %}
+					<div class="font--sans">{{accolades}}</div>
+				{% endfor %}
+			</div>
+		{% endif %}
+		{% if page.tec.pairing %}
+			<div class="wine-spec grid--one grid--sm-half">
+				<h4 class="text--uppercase font--kp condensed font--large">Pairs With</h4>
+				<div class="font--sans">
+					{% for pairing in page.tec.pairing %}
+						{{pairing}}{% if forloop.last %}{% else %},{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		{% endif %}
+	</div>
+	<hr class="spacing--vert-1">
+	{% if page.tec.cents %}
+		<div class="flex flex-wrap grid--one spacing--vert-2 justify--between section--cents">
+			<div class="grid--fifth block--stamp"><img src="/app/images/stamp.png" alt="Derek's Stamp of Approval"></div>
+			<div class="grid--one quote spacing--horiz-1">
+				<h4 class="text--uppercase font--kp condensed font--large">Derek's Two Cents</h4>
+				<p class="font--italic font--large">&ldquo;{{page.tec.cents}}&rdquo;</p>
+				<img src="/app/images/derek.png" width="110" alt="Derek's Signature">
+			</div>
+		</div>
+	{% endif %}
+	
+</div>
+<div class="section--wine-image flex align--start justify--center content--start spacing--horiz-1 flex flex-wrap">
+	<div class="grid--one">
+		<img width="200" class="margin--center wine--bottle" src="{{page.image}}" alt="{{page.title}}">
+	</div>
+	<div class="pricing grid--two-thirds text--center">
+		{% if page.price %}<h2 class="font--kp">{{page.price}}</h2>{% endif %}
+		<hr class="double grid--one flex flex-column justify--between">
+	</div>
+	<div class="grid--one grid--sm-two-thirds text--center spacing--vert-1 ">
+		{% if page.club == true %}
+			<div class="font--sans font--italic spacing--vert-1">Available to Wine Club <br>Members Only</div>
+			{% if person.member != true %}
+				<span class="button grid--one block border faded font--sans font--large">Buy Wine</span><br>
+				<a href="{{site.club.signup}}?ref={{page.title}}" class="button font--sans grid--one block active color--black">Join Our Wine Club</a>
+			{% else %}
+				<a href="{{purchaseUrl}}" class="button grid--one fill block border font--sans active font--large">Buy Wine</a>
+			{% endif %}
+		{% else %}
+			<a href="{{purchaseUrl}}" class="button grid--one fill block border font--sans active font--large">Buy Wine</a>
+		{% endif %}
+	</div>
+</div>
+</section>

@@ -26,3 +26,4 @@ exclude:
 collections:    
   wine:
     output: true
+    permalink: /awesome/:path/

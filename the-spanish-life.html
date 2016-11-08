@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('http://placebear.com/g/1200/600');">
+	<h2>The Spanish Life</h2>
+</section>
+<section class="spacing--gutter spacing--vert-1">
+	{% for post in site.posts %}
+	<div class="spacing--vert-1">
+	<h3>{{post.title}}</h3>
+	</div>
+	{% endfor %}
+</section>

@@ -3,8 +3,8 @@ layout: wine
 year: 2013
 title: The Mix
 sub:
-bg-image: /app/images/tempranillo.jpg
-color-image: /app/images/wine--the-mix.jpg
+bg-image: app/images/tempranillo.jpg
+color-image: app/images/wine--the-mix.jpg
 intro:
     title:
     content:
@@ -22,7 +22,7 @@ tec:
     accolades:
     pairing:
     cents:
-image: /app/images/bottle--the-mix.png
+image: app/images/bottle--the-mix.png
 price:
 club:
 techsheet:

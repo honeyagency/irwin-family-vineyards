@@ -22,6 +22,7 @@ exclude:
   - node_modules
   - package.json
   - Gruntfile.js
+  - _sass
 
 collections:    
   wine:

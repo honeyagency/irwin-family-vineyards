@@ -116,7 +116,7 @@ layout: default
 			<div class="font--sans font--italic spacing--vert-1">Available to Wine Club <br>Members Only</div>
 			{% if person.member != true %}
 				<span class="button grid--one block border faded font--sans font--large">Buy Wine</span><br>
-				<a href="{{site.club.signup}}?ref={{page.title}}" class="button font--sans grid--one block active color--black">Join Our Wine Club</a>
+				<a href="{{site.club.signup}}?ref={{page.title}}" class="button font--sans grid--one block active color--black font--large">Join Our Wine Club</a>
 			{% else %}
 				<a href="{{purchaseUrl}}" class="button grid--one fill block border font--sans active font--large">Buy Wine</a>
 			{% endif %}
@@ -125,4 +125,15 @@ layout: default
 		{% endif %}
 	</div>
 </div>
+</section>
+<section class="section--wine-grid flex flex-wrap spacing--gutter justify--between spacing--vert-2">
+<div class="grid--one text--center spacing--vert-1"><h2 class="font--kp condensed">More Wines</h2></div>
+{% assign currentWine = page.title %}
+{% for wine in site.wine %}
+	{% if wine.title != currentWine %}
+		<div class="block--wine-cta text--center bg--image cover grid--one grid--sm-third spacing--vert-5" style="background-image:url('{{wine.color-image}}')">
+			<a href="{{wine.url}}" class="button border color--brown-light {{wine.title}}">{{wine.title}}</a>
+		</div>
+	{% endif %}
+{% endfor %}
 </section>

@@ -2,8 +2,11 @@
 layout: default
 ---
 <section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('app/images/trees.jpg');">
-	<div class="font--sans text--uppercase font--larger">A Taste of</div>
-	<h1>Spain</h1>
-	<div class="font--sans text--uppercase font--larger">Via California</div>
-	<a class="color--white bg--black button font--large">Shop Wines</a>
+	<h1>Our Wine</h1>
 </section>
+{% for wine in site.wine %}
+	<section class="flex flex-wrap spacing--gutter spacing--vert-1">
+		<div class="grid--sm-fourth"><img src="{{wine.color-image}}" alt="{{wine.title}}"></div>
+		<div class="grid--sm-two-thirds">{{wine.title}}</div>
+	</section>
+{% endfor %}

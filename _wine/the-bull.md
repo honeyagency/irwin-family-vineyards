@@ -5,6 +5,7 @@ title: The Bull
 sub:
 bg-image: /app/images/tempranillo.jpg
 color-image: /app/images/wine--the-bull.jpg
+blurb: "A unique wine, rich and deep in color and complimented with lingering notes of black cherry, tobacco, and cassis."
 intro:
     title:
     content:

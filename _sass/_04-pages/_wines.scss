@@ -1,0 +1,13 @@
+.wines--wine {
+    @include media($max-sm) {
+        text-align: center;
+    }
+}
+
+.wines--image {
+    img {
+        @include media($max-sm) {
+            height: 250px;
+        }
+    }
+}

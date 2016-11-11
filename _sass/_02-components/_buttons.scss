@@ -2,6 +2,7 @@
     font-size: 1em;
     line-height: 1.2;
     padding: 1em 0.5em;
+    display: inline-block;
 
     @include media($screen-md) {
         padding: 0.7em 1em;
@@ -29,5 +30,13 @@
     &.active {
         background-color: $black;
         color: white;
+    }
+
+    &.inline {
+        display: inline;
+    }
+
+    &.smaller {
+        padding: 0.5em 0.8em;
     }
 }

@@ -4,10 +4,13 @@ layout: default
 <section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('http://placebear.com/g/1200/600');">
 	<h2>The Spanish Life</h2>
 </section>
-<section class="spacing--gutter spacing--vert-1">
+<section class=" spacing--vert-1 flex flex-wrap justify--baseline">
 	{% for post in site.posts %}
-	<div class="spacing--vert-1">
-	<h3>{{post.title}}</h3>
-	</div>
+		<div class="grid--one grid--sm-half spacing--vert-1 spacing--gutter spacing--dsk-vert-2">
+			<h3 class="font--kp font--large">{{post.title}}</h3>
+			<time class="font--sans">{{post.date}}</time>
+			<div class="font-- font--sans">{{post.excerpt}}</div>
+			<a href="{{post.url}}" class="button smaller color--white bg--black font--medium font--sans">View Post</a>
+		</div>
 	{% endfor %}
 </section>

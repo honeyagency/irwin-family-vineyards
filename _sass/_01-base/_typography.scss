@@ -194,6 +194,21 @@ ol {
 a {
     text-decoration: none;
     color: $link-colors;
+
+    &.button {
+        color: white !important;
+
+        &.color--black {
+            color: black !important;
+        }
+    }
+}
+
+footer {
+    a {
+        text-decoration: none;
+        color: map-get($brown, light) !important;
+    }
 }
 
 code, pre {
@@ -249,3 +264,14 @@ hr {
 //         letter-spacing: inherit;
 //     }
 // }
+p.small {
+    font-size: .8rem;
+}
+
+.alertYellow {
+    background-color: map-get($green, main);
+    color: white;
+    padding: 1em;
+
+    @extend .font--sans;
+}

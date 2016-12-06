@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('app/images/trees.jpg');">
+<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('/assets/images/images/trees.jpg');">
 	<div class="font--sans text--uppercase font--larger">Meet</div>
 	<h1>Our Family</h1>
 </section>
@@ -14,6 +14,18 @@ layout: default
 	<p>From my early childhood in a small town outside of Madrid, my life has always had a prevailing Spanish influence, and engrained in my heart are memories of Spain's white washed patios, long siestas, and memorable meals. I focus on honoring traditional Spanish wines by giving them a new life here in the California foothills. Que approveche!</p>
 	</div>
 </section>
+<form action="meet-our-family_submit" method="get" accept-charset="utf-8">
+<input type="button" name="" value="">
+<select name="" >
+	<option value="option">This is an option</option>
+	<option value="option">This is an option</option>
+	<option value="option">This is an option</option>
+	<option value="option">This is an option</option>
+	<option value="option">This is an option</option>
+	<option value="option">This is an option</option>
+
+</select>
+</form>
 <section class="section--wine-grid flex flex-wrap">
 	{% for wine in site.wine %}
 		<div class="block--wine-cta text--center bg--image cover grid--half grid--sm-fourth nog spacing--vert-5" style="background-image:url('{{wine.color-image}}')">

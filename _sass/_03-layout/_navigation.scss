@@ -1,5 +1,9 @@
 nav {
     ul {
+        @extend .mar-no;
+
+        @extend .font--medium;
+
         list-style-type: none;
 
         li {
@@ -7,6 +11,10 @@ nav {
             display: inline;
 
             a {
+                color: #000000 !important;
+
+                @extend .font--medium;
+
                 padding-right: 1em;
             }
 
@@ -71,6 +79,11 @@ nav {
                 }
             }
         }
+    }
+
+
+    .v65-home {
+        display: none;
     }
 }
 

@@ -1,0 +1,76 @@
+#v65-modalContainer, .v65-modalCartSelected {
+    width: 70vw;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    padding: 1em 2em;
+    background-color: map-get($brown, light);
+    z-index: 99;
+    max-width: 500px;
+
+    #{$all-text-inputs} {
+        width: 100% !important;
+    }
+
+    legend {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        letter-spacing: 1px;
+        line-height: 0;
+        margin-bottom: 1em;
+    }
+
+    button {
+        @extend .button;
+
+        @extend .font--normal;
+
+        @extend .color--white;
+
+        @extend .bg--black;
+
+        font-size: .8rem;
+    }
+
+    #v65-modalContentHeader {
+        a {
+            span {
+                text-transform: uppercase;
+
+                @extend .font--sans;
+
+                top: -1em;
+                position: absolute;
+                right: 0;
+                letter-spacing: 1px;
+                font-size: .8rem;
+            }
+        }
+    }
+
+    fieldset {
+        .v65-group {
+            padding: .8em 0;
+
+            label {
+                display: inline;
+            }
+        }
+    }
+}
+
+#v65-modalContentWrapper {
+    position: relative;
+    z-index: 999999;
+}
+
+#v65-modalContent {
+    p {
+        &:last-of-type {
+            a {
+                display: none;
+            }
+        }
+    }
+}

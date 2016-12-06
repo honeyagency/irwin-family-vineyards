@@ -3,14 +3,15 @@ layout: wine
 year: 2013
 title: The Mix
 sub:
-bg-image: /app/images/tempranillo.jpg
-color-image: /app/images/wine--the-mix.jpg
-blurb: "A unique wine, rich and deep in color and complimented with lingering notes of black cherry, tobacco, and cassis."
+link: /product/The-Mix
+bg-image: /assets/images/images/tempranillo.jpg
+color-image: /assets/images/images/wine--the-mix.jpg
+blurb: "The Mix exudes flavors and aromas of strawberries, chocolate truffles, red raspberries, violets and earth."
 intro:
     title:
     content:
 tec:
-    tasting:
+    tasting: 'The Mix exudes flavors and aromas of strawberries, chocolate truffles, red raspberries, violets and earth.'
     appellation:
     varietal:
         - 40% Garnacha
@@ -23,7 +24,7 @@ tec:
     accolades:
     pairing:
     cents:
-image: /app/images/bottle--the-mix.png
+image: /assets/images/images/bottle--the-mix.png
 price:
 club:
 techsheet:

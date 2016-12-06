@@ -1,16 +1,13 @@
 ---
 layout: default
 ---
-<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('http://placebear.com/g/1200/600');">
-	<h2>The Spanish Life</h2>
-</section>
 <section class=" spacing--vert-1 flex flex-wrap justify--baseline">
 	{% for post in site.posts %}
-		<div class="grid--one grid--sm-half spacing--vert-1 spacing--gutter spacing--dsk-vert-2">
-			<h3 class="font--kp font--large">{{post.title}}</h3>
-			<time class="font--sans">{{post.date}}</time>
-			<div class="font-- font--sans">{{post.excerpt}}</div>
-			<a href="{{post.url}}" class="button smaller color--white bg--black font--medium font--sans">View Post</a>
+		<div class="grid--sm-two-thirds spacing--vert-1 spacing--gutter spacing--dsk-vert-2">
+			<time class="font--sans">{{post.date | date: "%b %-d, %Y" }}</time>
+			<h1 class=" font--kp text--capitalize">{{post.title}}</h1>
+			<div class="post-wrap">{{post.excerpt}}</div>
+			<a href="{{post.url}}" class="font--medium font--sans">Read More</a>
 		</div>
 	{% endfor %}
 </section>

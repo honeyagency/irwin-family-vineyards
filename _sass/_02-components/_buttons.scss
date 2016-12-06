@@ -40,3 +40,22 @@
         padding: 0.5em 0.8em;
     }
 }
+
+.largeBtn {
+    background-color: $black;
+    color: white;
+
+    @extend .font--sans;
+
+    line-height: $base-line-height;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+
+    @extend .button;
+
+    font-size: 1em;
+}
+.modalBtn{
+        background-color: $black;
+    color: white;
+}

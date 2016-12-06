@@ -18,6 +18,15 @@
     }
 }
 
+.color--brown {
+    color: map-get($brown, main);
+
+    svg {
+        path {
+            fill: map-get($brown, main);
+        }
+    }
+}
 .color--brown-light {
     color: map-get($brown, light);
 

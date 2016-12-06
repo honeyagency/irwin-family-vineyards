@@ -25,15 +25,6 @@
         }
     }
 
-    .wine-spec {
-        margin-top: .3em;
-        margin-bottom: .3em;
-
-        @include media($max-sm) {
-            // font-size: 0.8rem;
-        }
-    }
-
     // @include media($screen-sm){
     .section--cents {
         position: relative;
@@ -112,5 +103,233 @@
         .pricing {
             padding-top: 1.5em;
         }
+    }
+}
+
+.v65-product-description {
+    @extend .font--sans;
+
+    @extend .font--large;
+}
+
+.wine-spec,
+.v65-wine-profile > .v65-product-attribute,
+.v65-wine-specs > .v65-product-attribute {
+    margin-top: .3em;
+    margin-bottom: .3em;
+
+    @extend .grid--one;
+
+    @extend .grid--sm-half;
+}
+
+.v65-product-attributeLabel {
+    @extend h4;
+
+    @extend .text--uppercase;
+
+    @extend .font--kp;
+
+    @extend .font--large;
+}
+
+.v65-product-attributeValue {
+    @extend .font--sans;
+}
+
+.v65-wine-specs,
+.v65-wine-profile {
+    @extend .grid--one;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: basline;
+
+    .v65-wine-wineMakerNotes {
+        display: none;
+    }
+}
+
+.v65-wine-profile-title.v65-title,
+.v65-wine-specs-title.v65-title {
+    display: none !important;
+}
+
+.v65-product-photo {
+    @extend .grid--one;
+
+    img {
+        @extend .margin--center;
+
+        @extend .wine--bottle;
+    }
+}
+
+.v65-addToCart {
+    fieldset {
+        legend {
+            display: none;
+        }
+
+        .v65-product-addToCart-priceWrapper {
+            .v65-product-addToCart-price {
+                @extend h2;
+
+                @extend .font--kp;
+            }
+
+            .v65-product-addToCart-unitDescription {}
+
+            .v65-product-addToCart-productSKU {
+                display: none;
+            }
+        }
+
+        .v65-product-addToCart-quantity {}
+
+        .v65-product-addToCart-button {
+            .defaultBtn {
+                @extend .button;
+
+                @extend .font--sans;
+
+                @extend .grid--one;
+
+                @extend .block;
+
+                @extend .active;
+
+                @extend .color--black;
+
+                @extend .font--large;
+
+                border: 0;
+
+                span {
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+.v65-wine-wineMakerNotes {
+    .v65-product-attributeLabel {
+        display: none;
+    }
+
+    @extend .font--italic;
+
+    @extend .font--large;
+}
+
+.v65-product-relatedProducts {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+
+    @extend .spacing--gutter;
+
+    @extend .max-wrap;
+
+    @include media($screen-sm) {
+        margin-bottom: 3em;
+    }
+
+
+    &:nth-child(2) {
+        @include media($screen-sm) {
+            border-right: 1px solid map-get($brown, light);
+        }
+    }
+
+    .v65-product-relatedProducts-title {
+        @extend h2;
+
+        margin-bottom: 1em;
+
+        @extend .font--kp;
+
+        @extend .grid--one;
+
+        margin-bottom: (1e,);
+    }
+
+    .v65-product-relatedProducts-product {
+        @extend .grid--one;
+
+        @extend .grid--sm-half;
+    }
+
+    .v65-product-addToCart-button, .v65-product-addToCart-quantity {
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .v65-product-title {
+        padding: 0.8em 0 0 0;
+        font-size: 2rem;
+    }
+
+    .v65-product-addToCart-price {
+        font-size: 1.2rem !important;
+    }
+}
+
+// Shop Our Wines
+
+.v65-product2Up.v65-group {
+    @extend .grid--one;
+
+    @extend .grid--sm-half;
+
+    .separateButton, .v65-product-socialBar, .v65-product-addToCart, .v65-subtitle {
+        display: none;
+    }
+
+    .v65-product-photo {
+        @extend .grid--one;
+
+        @extend .grid--sm-fifth;
+
+        @extend .text--center;
+
+        @extend .spacing--vert-1;
+
+        @extend .wines--image;
+    }
+
+    .v65-product-drilldownLink {
+        @extend .button;
+
+        @extend .inline;
+
+        @extend .smaller;
+
+        @extend .font--sans;
+
+        @extend .grid--one;
+
+        @extend .active;
+
+        @extend .color--white;
+
+        @extend .font--large;
+
+        a {
+            color: white;
+        }
+    }
+
+    .v65-title {
+        @extend h3;
+
+        @extend .font--kp;
+
+        @extend .text--uppercase;
+
+        @extend .color--red-dark;
     }
 }

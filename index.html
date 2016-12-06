@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('app/images/trees.jpg');">
+<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('/assets/images/images/trees.jpg');">
 	<div class="font--sans text--uppercase font--larger">A Taste of</div>
 	<h1>Spain</h1>
 	<div class="font--sans text--uppercase font--larger">Via California</div>
@@ -10,31 +10,31 @@ layout: default
 <section class="spacing--gutter text--center max-wrap font--sans spacing--vert-1 spacing--dsk-vert-3 font--large">
 	From my early childhood in a small town outside of Madrid, my life has always had a prevailing Spanish influence, and engrained in my heart are memories of Spain's white washed patios, long siestas, and memorable meals. I focus on honoring traditional Spanish wines by giving them a new life here in the California foothills. Que approveche!
 	<br><br>
-	<img src="app/images/derek.png" alt="">
+	<img src="/assets/images/images/derek.png" alt="">
 </section>
 <section class="flex flex-wrap justify--between margin--gutter">
 	<div class="grid--one grid--sm-half text--center">
-		<img src="app/images/shrimp.jpg" alt="">
+		<img src="/assets/images/images/shrimp.jpg" alt="">
 		<span class="font--large">Learn about the</span><br>
 		<h2 class="font--kp text--uppercase font--bold"><a href="/the-spanish-life.html" class="color--black">Spanish Life</a></h2>
 		<hr class="double">
 	</div>
 	<div class="grid--one grid--sm-half text--center">
-		<img src="app/images/family.jpg" alt="">
+		<img src="/assets/images/images/family.jpg" alt="">
 		<span class="font--large">Meet</span><br>
 		<h2 class="font--kp text--uppercase font--bold"><a href="/meet-our-family.html" class="color--black">Our Family</a></h2>
 		<hr class="double">
 	</div>
 </section>
-<section class="spacing--gutter spacing--vert-3 spacing--dsk-vert-5 max-wrap margin--center text--center bg--image right" style="background-image:url('app/images/bull-bg.png');">
+<section class="spacing--gutter spacing--vert-3 spacing--dsk-vert-5 max-wrap margin--center text--center bg--image right" style="background-image:url('/assets/images/images/bull-bg.png');">
 	<h3 class="font--sans text--uppercase">Be Part of Our Family</h3>
 	<p class="font--large font--sans">Bring Irwin Family Wines to your table with a<br>curated selection from our winemaker.</p>
 	<a href="/wine-club.html" class="button border color--black">Join Our Wine Club</a>
 </section>
 <section class="section--wine-grid flex flex-wrap">
 	{% for wine in site.wine %}
-		<div class="block--wine-cta text--center bg--image cover grid--half grid--sm-fourth nog spacing--vert-5" style="background-image:url('{{wine.color-image}}')">
-			<a href="{{wine.url}}" class="button border color--brown-light {{wine.title}}">{{wine.title}}</a>
+		<div class="block--wine-cta text--center bg--image cover grid--half grid--sm-third nog spacing--vert-5" style="background-image:url('{{wine.color-image}}')">
+			<a href="{{wine.link}}" class="button border color--brown-light {{wine.title}}">{{wine.title}}</a>
 		</div>
 	{% endfor %}
 	

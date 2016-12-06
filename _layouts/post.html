@@ -1,12 +1,21 @@
 ---
 layout: default
 ---
-<article class="post outer" itemscope itemtype="http://schema.org/BlogPosting">
-	<header class="post-header">
-		<h1 itemprop="name headline">{{ page.title }}</h1><br>
-		<time datetime="{{ page.date  }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}
+<article class="post spacing--gutter spacing--vert-2 flex flex-wrap justify--between align--start" itemscope itemtype="http://schema.org/BlogPosting">
+	<header class="grid--one">
+		<time class="font--sans" datetime="{{ page.date  }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span class="font--sans" itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="font--sans" itemprop="name">{{ page.author }}</span></span>{% endif %}
+		<h1 itemprop="name headline" class="font--kp text--capitalize">{{ page.title }}</h1>
 	</header>
-	<section itemprop="articleBody">
+	<section itemprop="articleBody" class="grid--sm-two-thirds post-wrap">
 		{{ content }}
+		<br><hr class="double" /><br>
+	</section>
+	<section class="grid--sm-fourth section--blog-social flex flex-wrap align--center">
+		<span class="font--sans text--uppercase letter--1">Share</span>
+		<a id="facebookShare" data-title="<v65:pageTitle></v65:pageTitle>"><i data-grunticon-embed class="icon-social--facebook color--light-brown"></i></a>
+		<a id="twitterShare" data-title="<v65:pageTitle></v65:pageTitle>"><i data-grunticon-embed class="icon-social--twitter color--light-brown"></i></a>
+	</section>
+	<section class="blog--footer grid--one">
+		<a href="/The-Spanish-Life" class="font--medium font--sans">Back to The Spanish Life</a>
 	</section>
 </article>

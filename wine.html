@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('app/images/grapes.jpg');">
+<section class="bg--image margin--gutter header cover flex flex-wrap justify--center align--center flex--column color--white" style="background-image: url('/assets/images/images/grapes.jpg');">
 	<h1>Our Wine</h1>
 </section>
 <section class="flex flex-wrap justify--center spacing--gutter spacing--vert-2">
@@ -13,9 +13,9 @@ layout: default
 			<div class="grid--one grid--sm-three-fourths spacing--horiz-1 spacing--dsk-horiz-2 wines--wine">
 				<h3 class="font--kp condensed text--uppercase color--red-dark wine--title">{{wine.title}}</h3>
 				<p class="font--sans font--medium spacing--vert-1">{{wine.blurb}}</p>
-				<a href="{{wine.url}}" class="button inline smaller font--sans grid--one active color--black font--large">View Wine</a>
+				<a href="{{wine.link}}" class="button inline smaller font--sans grid--one active color--black font--large">Buy Wine</a>
 			</div>
-			
 		</section>
 	{% endfor %}
+	<section class="flex flex-wrap spacing--vert-2 align--center grid--one grid--sm-half justify--around"></section>
 </section>

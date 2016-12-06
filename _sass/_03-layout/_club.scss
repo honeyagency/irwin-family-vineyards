@@ -1,0 +1,106 @@
+.v65-club {
+    @extend .grid--one;
+
+    @extend .grid--sm-two-thirds;
+}
+
+.v65-clubJoin {
+    @extend .button;
+
+    @extend .border;
+
+    @extend .color--black;
+
+    font-size: 1em;
+}
+
+.v65-clubTitle {
+    @extend h3;
+
+    @extend .font--kp;
+
+    a {
+        color: black;
+    }
+}
+
+.layout--club {
+    h1 {
+        @extend h3;
+
+        @extend .font--kp;
+    }
+}
+
+#v65-clubFormWrapper {
+    font-size: 1rem;
+    padding-top: 2em;
+    border-top: 1px solid;
+    margin-top: 1em;
+
+    form {
+        width: 100% !important;
+        max-width: none !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between;
+
+        fieldset {
+            @extend .grid--one;
+
+            @extend .grid--sm-half;
+        }
+
+        #v65-fieldset-shippingInfo {
+            order: 3;
+        }
+
+        #v65-fieldset-usernamePassword {
+            order: 4;
+        }
+
+        #v65-fieldset-paymentMethod {
+            order: 2;
+        }
+
+        #v65-checkoutFooter {
+            order: 5;
+            flex-basis: 100%;
+        }
+
+        #v65-checkoutSecure {}
+    }
+}
+
+#v65-cardExpiryMo, #v65-cardExpiryYr {
+    width: 25%;
+    display: inline;
+}
+
+fieldset#v65-fieldset-usernamePassword {
+    div {
+        display: inline;
+        float: left;
+        width: 33%;
+
+        &:first-of-type {
+            width: 100% !important;
+        }
+    }
+}
+
+.v65-clubSignUp-Teaser {
+    @extend .font--large;
+}
+
+.layout--club {
+    .v65-clear {
+        display: none;
+    }
+}
+
+#v65-clubFormWrapper {
+    + .grid--sm-third {
+        display: none !important;
+    }
+}

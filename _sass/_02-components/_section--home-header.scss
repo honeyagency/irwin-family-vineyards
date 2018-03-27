@@ -1,0 +1,39 @@
+.section--home-header {
+    //  position: relative;
+    //  img{
+    //      position: absolute;
+
+    //      &:first-of-type{
+    // left: 0;
+    //      }
+    //  }   
+    text-align: center;
+    @include media($screen-md) {
+        min-height: 75vh;
+    }
+
+
+    position: relative;
+
+    .block--images {
+        position: absolute;
+        z-index: -2;
+        width: 120%;
+    }
+
+    @include media($max-xs) {}
+
+    
+
+    @include media($max-md) {
+        padding-bottom: 10em;
+        padding-top: 10em;
+    }
+    @include media($max-sm) {
+         padding-bottom:2.5em;
+        padding-top: 2.5em;
+    }
+
+
+    @include media($max-lg) {}
+}

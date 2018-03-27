@@ -11,6 +11,10 @@
 }
 
 #v65-cartTable {
+    td {
+        @extend .font--sans;
+    }
+
     margin: 0 0 2em 0;
     border-bottom: 1px solid transparentize($black, 0.8);
 
@@ -32,14 +36,23 @@
         vertical-align: middle;
     }
 
-    #v65-cartSubtotal,
-    .v65-cartTax {
-        background: rgba(41, 31, 39, 0.09);
+    tr {
+        &:nth-of-type(odd) {
+            background: rgba(41, 31, 39, 0.09);
+        }
 
-        &#v65-cartShippingStates {
+        &:nth-of-type(even) {
             background: transparent;
         }
     }
+
+    // #v65-cartSubtotal,
+    // .v65-cartTax {
+
+    //     &#v65-cartShippingStates {
+    //         background: transparent;
+    //     }
+    // }
 }
 
 table {
@@ -65,6 +78,10 @@ table {
         display: inline-block;
         height: 30px;
         margin: 0;
+        box-sizing: border-box;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-right: -2px;
     }
 
     .modalBtn {
@@ -145,4 +162,3 @@ table {
         @extend .grid--sm-half;
     }
 }
-

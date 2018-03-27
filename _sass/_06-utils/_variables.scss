@@ -1,6 +1,7 @@
 
-$body-sans-font: 'kepler-std-caption', sans-serif;
 
+$body-sans-font: 'kepler-std-caption', serif;
+$condensed-sans: "kepler-std-condensed-display", serif;
 $base-sans-font: $body-sans-font;
 $body-condensed-font: $body-sans-font;
 
@@ -25,6 +26,8 @@ $base-padding: 1em;
 $base-animation: cubic-bezier(0.4, 0.01, 0.165, 0.99);
 
 $link-colors: map-get($red, main);
+
+$grid:	1;
 
 
 $base-border-radius: 8px;
@@ -101,3 +104,4 @@ $max-md:  new-breakpoint(max-width $screen-md-max  12);
 $max-lg:  new-breakpoint(max-width $screen-lg-max  12);
 
 $wrapper-width: 1400px;
+$max-wrap: $wrapper-width;

@@ -263,7 +263,8 @@
         @extend .grid--sm-half;
     }
 
-    .v65-product-addToCart-button, .v65-product-addToCart-quantity {
+    .v65-product-addToCart-button,
+    .v65-product-addToCart-quantity {
         max-width: 200px;
         margin: 0 auto;
     }
@@ -279,13 +280,15 @@
 }
 
 // Shop Our Wines
-
 .v65-product2Up.v65-group {
     @extend .grid--one;
 
     @extend .grid--sm-half;
 
-    .separateButton, .v65-product-socialBar, .v65-product-addToCart, .v65-subtitle {
+    .separateButton,
+    .v65-product-socialBar,
+    .v65-product-addToCart,
+    .v65-subtitle {
         display: none;
     }
 
@@ -332,4 +335,39 @@
 
         @extend .color--red-dark;
     }
+}
+
+.v65-product-addToCart-price {
+    font-size: 1.6rem !important;
+
+    .text {
+        display: block !important;
+        font-size: 1rem !important;
+        border-bottom: 1px solid !important;
+        padding: 0.7em 0 !important;
+        width: 160px !important;
+        margin: 0 auto 1em auto !important;
+
+        @extend .font--sans;
+    }
+}
+
+.wineClubPrice {
+    font-size: 2.1rem !important;
+}
+
+.regularPrice {
+    display: block !important;
+    font-size: 1rem !important;
+    border: none !important;
+    padding: 0.7em 0 !important;
+    width: 160px !important;
+
+    @extend .font--sans;
+
+    margin: 0 auto 1em auto !important;
+}
+
+.v65-product-volumeBasePricing {
+    display: none !important;
 }

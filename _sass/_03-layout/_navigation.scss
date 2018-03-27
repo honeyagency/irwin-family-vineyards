@@ -11,7 +11,7 @@ nav {
             display: inline;
 
             a {
-                color: #000000 !important;
+                color: #000000;
 
                 @extend .font--medium;
 
@@ -37,7 +37,7 @@ nav {
     @include media($max-sm) {
         position: absolute;
         z-index: 99;
-        top: 4em;
+        top: 3.5em;
         bottom: 0;
         right: 0;
         left: 0;
@@ -113,4 +113,9 @@ body {
             }
         }
     }
+}
+
+.mobile--cart {
+    height: 18px;
+    width: 14px;
 }

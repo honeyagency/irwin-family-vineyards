@@ -1,0 +1,16 @@
+#instafeed{
+	@extend .flex;
+	@extend .flex-wrap;
+	@extend .justify--between;
+}
+body.home{
+	header{
+		hr{
+			color: #000;
+		}
+		.trigger--nav{
+			color: #000;
+		}
+	}
+
+}

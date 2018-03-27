@@ -1,356 +1,393 @@
-.flex {
-    display: flex !important;
-}
+$gutter: $grid;
 
-.flex--dsk {
-    @include media($screen-sm) {
-        display: flex;
-    }
-}
-
-.block {
-    display: block;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.flex--column {
-    flex-direction: column;
-}
-
-.flex--dsk-column {
-    @include media($screen-md) {
-        flex-direction: column;
-    }
-}
-
-.justify--between {
-    justify-content: space-between;
-}
-
-.justify--around {
-    justify-content: space-around;
-}
-
-.justify--center {
-    justify-content: center;
-}
-
-.justify--end {
-    justify-content: flex-end;
-}
-
-.align--between {
-    align-content: space-between;
-}
-
-.content--start {
-    align-content: flex-start;
-}
-
-.align--center {
-    align-items: center;
-}
-
-.align--start {
-    align-items: flex-start;
-}
-
-.align--stretch {
-    align-items: stretch;
-}
-
-.align--end {
-    align-items: flex-end;
-}
-
-.align--baseline {
-    align-items: baseline;
-}
-
-.float--right {
-    float: right;
-}
-
-.float--left {
-    float: left;
-}
-
-.display--center {
-    margin: 0 auto;
-    display: table;
-}
-
-.margin--center {
-    margin: 0 auto;
-}
-
-.nomar {
-    margin: 0;
-}
+// this variable is in variables
 
 .grid--one {
-    box-sizing: border-box;
-    max-width: 100%;
     flex-basis: 100%;
     width: 100%;
 }
 
-.grid--half {
-    box-sizing: border-box;
-    max-width: 48.5%;
-    flex-basis: 48.5%;
-    width: 48.5%;
+.grid--four-fifths {
+    flex-basis: calc(100% / 1.25 - (.2em * #{$gutter}));
+    width: calc(100% / 1.25 - (.2em * #{$gutter}));
 
     &.nog {
-        box-sizing: border-box;
-        max-width: 50%;
-        flex-basis: 50%;
-        width: 50%;
+        flex-basis: calc(100% /  1.25);
+        width: calc(100% /  1.25);
     }
 }
 
-.grid--third {
-    box-sizing: border-box;
-    max-width: 31.733%;
-    flex-basis: 31.733%;
-    width: 31.733%;
+.grid--three-fourths {
+    flex-basis: calc(75% - (.25em * #{$gutter}));
+    width: calc(75% - (.25em * #{$gutter}));
 
     &.nog {
-        box-sizing: border-box;
-        max-width: 33.333%;
-        flex-basis: 33.333%;
-        width: 33.333%;
-    }
-}
-
-.grid--fourth {
-    box-sizing: border-box;
-    max-width: 23.8%;
-    flex-basis: 23.8%;
-    width: 23.8%;
-
-    &.nog {
-        box-sizing: border-box;
-        max-width: 25%;
-        flex-basis: 25%;
-        width: 25%;
-    }
-}
-
-.grid--fifth {
-    box-sizing: border-box;
-    max-width: 19.04%;
-    flex-basis: 19.04%;
-    width: 19.04%;
-
-    &.nog {
-        box-sizing: border-box;
-        max-width: 20%;
-        flex-basis: 20%;
-        width: 20%;
-    }
-}
-
-.grid--four-fifhts {
-    box-sizing: border-box;
-    max-width: 76.16%;
-    flex-basis: 76.16%;
-    width: 76.16%;
-
-    &.nog {
-        box-sizing: border-box;
-        max-width: 80%;
-        flex-basis: 80%;
-        width: 80%;
+        flex-basis: 75%;
+        width: 75%;
     }
 }
 
 .grid--two-thirds {
-    box-sizing: border-box;
-    max-width: 63.466%;
-    flex-basis: 63.466%;
-    width: 63.466%;
+    flex-basis: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+    width: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 1.5);
+        width: calc(100% / 1.5);
+    }
+}
+
+.grid--half {
+    flex-basis: calc(100% / 2 - (.5em * #{$gutter}));
+    width: calc(100% / 2 - (.5em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 2);
+        width: calc(100% / 2);
+    }
+}
+
+.grid--two-fifths {
+    flex-basis: calc(100% / 2.5 - (.6em * #{$gutter}));
+    width: calc(100% / 2.5 - (.6em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% /  2.5);
+        width: calc(100% /  2.5);
+    }
+}
+
+.grid--three-fifths {
+    flex-basis: calc(100% / 1.666666 - (.4em * #{$gutter}));
+    width: calc(100% / 1.666666 - (.4em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% /  1.666666);
+        width: calc(100% /  1.666666);
+    }
+}
+
+.grid--third {
+    flex-basis: calc(100% / 3 - (.6666666em * #{$gutter}));
+    width: calc(100% / 3 - (.6666666em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 3);
+        width: calc(100% / 3);
+    }
+}
+
+.grid--fourth {
+    flex-basis: calc(100% / 4 - (.75em * #{$gutter}));
+    width: calc(100% / 4 - (.75em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 4);
+        width: calc(100% / 4);
+    }
+}
+
+.grid--fifth {
+    flex-basis: calc(100% / 5 - (.8em * #{$gutter}));
+    width: calc(100% / 5 - (.8em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 5);
+        width: calc(100% / 5);
+    }
+}
+
+.grid--sixth {
+    flex-basis: calc(100% / 6 - (.85em * #{$gutter}));
+    width: calc(100% / 6 - (.85em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 6);
+        width: calc(100% / 6);
+    }
+}
+
+.grid--ninth {
+    flex-basis: calc(100% / 9 - (.55em * #{$gutter}));
+    width: calc(100% / 9 - (.55em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 9);
+        width: calc(100% / 9);
+    }
+}
+
+.grid--tenth {
+    flex-basis: calc(100% / 10 - (.55em * #{$gutter}));
+    width: calc(100% / 10 - (.55em * #{$gutter}));
+
+    &.nog {
+        flex-basis: calc(100% / 10);
+        width: calc(100% / 10);
+    }
 }
 
 @include media($screen-xs) {
-    .grid--xs-half {
-        box-sizing: border-box;
-        max-width: 48.5%;
-        flex-basis: 48.5%;
-        width: 48.5%;
+    .grid--xs-one {
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .grid--xs-four-fifths {
+        flex-basis: calc(100% / 1.25 - (.2em * #{$gutter}));
+        width: calc(100% / 1.25 - (.2em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 50%;
-            flex-basis: 50%;
-            width: 50%;
+            flex-basis: calc(100% /  1.25);
+            width: calc(100% /  1.25);
         }
     }
 
-    .grid--xs-third {
-        box-sizing: border-box;
-        max-width: 31.733%;
-        flex-basis: 31.733%;
-        width: 31.733%;
+    .grid--xs-three-fourths {
+        flex-basis: calc(75% - (.25em * #{$gutter}));
+        width: calc(75% - (.25em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 33.333%;
-            flex-basis: 33.333%;
-            width: 33.333%;
+            flex-basis: 75%;
+            width: 75%;
         }
     }
 
     .grid--xs-two-thirds {
-        box-sizing: border-box;
-        max-width: 63.466%;
-        flex-basis: 63.466%;
-        width: 63.466%;
+        flex-basis: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+        width: calc(100% / 1.5 - (.3333333em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 66.66%;
-            flex-basis: 66.66%;
-            width: 66.66%;
+            flex-basis: calc(100% / 1.5);
+            width: calc(100% / 1.5);
+        }
+    }
+
+    .grid--xs-three-fifths {
+        flex-basis: calc(100% / 1.666666 - (.4em * #{$gutter}));
+        width: calc(100% / 1.666666 - (.4em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% /  1.666666);
+            width: calc(100% /  1.666666);
+        }
+    }
+
+    .grid--xs-half {
+        flex-basis: calc(100% / 2 - (.5em * #{$gutter}));
+        width: calc(100% / 2 - (.5em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 2);
+            width: calc(100% / 2);
+        }
+    }
+
+    .grid--xs-two-fifths {
+        flex-basis: calc(100% / 2.5 - (.6em * #{$gutter}));
+        width: calc(100% / 2.5 - (.6em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% /  2.5);
+            width: calc(100% /  2.5);
+        }
+    }
+
+    .grid--xs-third {
+        flex-basis: calc(100% / 3 - (.6666666em * #{$gutter}));
+        width: calc(100% / 3 - (.6666666em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 3);
+            width: calc(100% / 3);
         }
     }
 
     .grid--xs-fourth {
-        box-sizing: border-box;
-        max-width: 23.8%;
-        flex-basis: 23.8%;
-        width: 23.8%;
+        flex-basis: calc(100% / 4 - (.75em * #{$gutter}));
+        width: calc(100% / 4 - (.75em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 25%;
-            flex-basis: 25%;
-            width: 25%;
+            flex-basis: calc(100% / 4);
+            width: calc(100% / 4);
         }
     }
 
     .grid--xs-fifth {
-        box-sizing: border-box;
-        max-width: 19.04%;
-        flex-basis: 19.04%;
-        width: 19.04%;
+        flex-basis: calc(100% / 5 - (.8em * #{$gutter}));
+        width: calc(100% / 5 - (.8em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 20%;
-            flex-basis: 20%;
-            width: 20%;
+            flex-basis: calc(100% / 5);
+            width: calc(100% / 5);
+        }
+    }
+
+    .grid--xs-sixth {
+        flex-basis: calc(100% / 6 - (.85em * #{$gutter}));
+        width: calc(100% / 6 - (.85em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
+        }
+    }
+
+    .grid--xs-ninth {
+        flex-basis: calc(100% / 9 - (.55em * #{$gutter}));
+        width: calc(100% / 9 - (.55em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 9);
+            width: calc(100% / 9);
+        }
+    }
+
+    .grid--xs-tenth {
+        flex-basis: calc(100% / 10 - (.55em * #{$gutter}));
+        width: calc(100% / 10 - (.55em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 10);
+            width: calc(100% / 10);
         }
     }
 }
 
 
 @include media($screen-sm) {
-    .grid--sm-two-thirds {
-        box-sizing: border-box;
-        max-width: 63.466%;
-        flex-basis: 63.466%;
-        width: 63.466%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 66.66%;
-            flex-basis: 66.66%;
-            width: 66.66%;
-        }
+    .grid--sm-one {
+        flex-basis: 100%;
+        width: 100%;
     }
 
-    .grid--sm-half {
-        box-sizing: border-box;
-        max-width: 48.5%;
-        flex-basis: 48.5%;
-        width: 48.5%;
+    .grid--sm-four-fifths {
+        flex-basis: calc(100% / 1.25 - (.2em * #{$gutter}));
+        width: calc(100% / 1.25 - (.2em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 50%;
-            flex-basis: 50%;
-            width: 50%;
-        }
-    }
-
-    .grid--sm-third {
-        box-sizing: border-box;
-        max-width: 31.736%;
-        flex-basis: 31.736%;
-        width: 31.736%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 33.333%;
-            flex-basis: 33.333%;
-            width: 33.333%;
-        }
-    }
-
-    .grid--sm-two-thirds {
-        box-sizing: border-box;
-        max-width: 63.466%;
-        flex-basis: 63.466%;
-        width: 63.466%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 66.66%;
-            flex-basis: 66.66%;
-            width: 66.66%;
-        }
-    }
-
-    .grid--sm-fourth {
-        box-sizing: border-box;
-        max-width: 23.8%;
-        flex-basis: 23.8%;
-        width: 23.8%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 25%;
-            flex-basis: 25%;
-            width: 25%;
-        }
-    }
-
-    .grid--sm-fifth {
-        box-sizing: border-box;
-        max-width: 19.04%;
-        flex-basis: 19.04%;
-        width: 19.04%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 20%;
-            flex-basis: 20%;
-            width: 20%;
+            flex-basis: calc(100% /  1.25);
+            width: calc(100% /  1.25);
         }
     }
 
     .grid--sm-three-fourths {
-        box-sizing: border-box;
-        max-width: 71.401%;
-        flex-basis: 71.401%;
-        width: 71.401%;
-    }
-
-    .grid--sm-four-fifhts {
-        box-sizing: border-box;
-        max-width: 76.16%;
-        flex-basis: 76.16%;
-        width: 76.16%;
+        flex-basis: calc(75% - (.25em * #{$gutter}));
+        width: calc(75% - (.25em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 80%;
-            flex-basis: 80%;
-            width: 80%;
+            flex-basis: 75%;
+            width: 75%;
+        }
+    }
+
+    .grid--sm-two-thirds {
+        flex-basis: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+        width: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 1.5);
+            width: calc(100% / 1.5);
+        }
+    }
+
+    .grid--sm-half {
+        flex-basis: calc(100% / 2 - (.5em * #{$gutter}));
+        width: calc(100% / 2 - (.5em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 2);
+            width: calc(100% / 2);
+        }
+    }
+
+    .grid--sm-three-fifths {
+        flex-basis: calc(100% / 1.666666 - (.4em * #{$gutter}));
+        width: calc(100% / 1.666666 - (.4em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% /  1.666666);
+            width: calc(100% /  1.666666);
+        }
+    }
+
+    .grid--sm-two-fifths {
+        flex-basis: calc(100% / 2.5 - (.6em * #{$gutter}));
+        width: calc(100% / 2.5 - (.6em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% /  2.5);
+            width: calc(100% /  2.5);
+        }
+    }
+
+    .grid--sm-third {
+        flex-basis: calc(100% / 3 - (.6666666em * #{$gutter}));
+        width: calc(100% / 3 - (.6666666em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 3);
+            width: calc(100% / 3);
+        }
+    }
+
+    .grid--sm-fourth {
+        flex-basis: calc(100% / 4 - (.75em * #{$gutter}));
+        width: calc(100% / 4 - (.75em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 4);
+            width: calc(100% / 4);
+        }
+    }
+
+    .grid--sm-fifth {
+        flex-basis: calc(100% / 5 - (.8em * #{$gutter}));
+        width: calc(100% / 5 - (.8em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 5);
+            width: calc(100% / 5);
+        }
+    }
+
+    .grid--sm-sixth {
+        flex-basis: calc(100% / 6 - (.85em * #{$gutter}));
+        width: calc(100% / 6 - (.85em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
+        }
+    }
+
+    .grid--sm-seventh {
+        flex-basis: calc(100% / 7 - (.8em * #{$gutter}));
+        width: calc(100% / 7- (.8em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 7);
+            width: calc(100% / 7);
+        }
+    }
+
+    .grid--sm-ninth {
+        flex-basis: calc(100% / 9 - (.55em * #{$gutter}));
+        width: calc(100% / 9 - (.55em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 9);
+            width: calc(100% / 9);
+        }
+    }
+
+    .grid--sm-tenth {
+        flex-basis: calc(100% / 10 - (.55em * #{$gutter}));
+        width: calc(100% / 10 - (.55em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 10);
+            width: calc(100% / 10);
         }
     }
 }
@@ -358,107 +395,127 @@
 
 @include media($screen-md) {
     .grid--md-one {
-        box-sizing: border-box;
-        max-width: 100%;
         flex-basis: 100%;
         width: 100%;
     }
 
-    .grid--md-two-thirds {
-        box-sizing: border-box;
-        max-width: 63.466%;
-        flex-basis: 63.466%;
-        width: 63.466%;
+    .grid--md-four-fifths {
+        flex-basis: calc(100% / 1.25 - (.2em * #{$gutter}));
+        width: calc(100% / 1.25 - (.2em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 66.66%;
-            flex-basis: 66.66%;
-            width: 66.66%;
+            flex-basis: calc(100% /  1.25);
+            width: calc(100% /  1.25);
+        }
+    }
+
+    .grid--md-three-fourths {
+        flex-basis: calc(75% - (.25em * #{$gutter}));
+        width: calc(75% - (.25em * #{$gutter}));
+
+        &.nog {
+            flex-basis: 75%;
+            width: 75%;
+        }
+    }
+
+    .grid--md-two-thirds {
+        flex-basis: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+        width: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 1.5);
+            width: calc(100% / 1.5);
+        }
+    }
+
+    .grid--md-three-fifths {
+        flex-basis: calc(100% / 1.666666 - (.4em * #{$gutter}));
+        width: calc(100% / 1.666666 - (.4em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% /  1.666666);
+            width: calc(100% /  1.666666);
         }
     }
 
     .grid--md-half {
-        box-sizing: border-box;
-        max-width: 48.5%;
-        flex-basis: 48.5%;
-        width: 48.5%;
+        flex-basis: calc(100% / 2 - (.5em * #{$gutter}));
+        width: calc(100% / 2 - (.5em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 50%;
-            flex-basis: 50%;
-            width: 50%;
-        }
-    }
-
-    .grid--md-third {
-        box-sizing: border-box;
-        max-width: 31.733%;
-        flex-basis: 31.733%;
-        width: 31.733%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 33.333%;
-            flex-basis: 33.333%;
-            width: 33.333%;
-        }
-    }
-
-    .grid--md-two-thirds {
-        box-sizing: border-box;
-        max-width: 65.866%;
-        flex-basis: 65.866%;
-        width: 65.866%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 66.66%;
-            flex-basis: 66.66%;
-            width: 66.66%;
-        }
-    }
-
-    .grid--md-fourth {
-        box-sizing: border-box;
-        max-width: 23.8%;
-        flex-basis: 23.8%;
-        width: 23.8%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 25%;
-            flex-basis: 25%;
-            width: 25%;
-        }
-    }
-
-    .grid--md-fifth {
-        box-sizing: border-box;
-        max-width: 19.04%;
-        flex-basis: 19.04%;
-        width: 19.04%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 20%;
-            flex-basis: 20%;
-            width: 20%;
+            flex-basis: calc(100% / 2);
+            width: calc(100% / 2);
         }
     }
 
     .grid--md-two-fifths {
-        box-sizing: border-box;
-        max-width: 40%;
-        flex-basis: 40%;
-        width: 40%;
+        flex-basis: calc(100% / 2.5 - (.6em * #{$gutter}));
+        width: calc(100% / 2.5 - (.6em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 40%;
-            flex-basis: 40%;
-            width: 40%;
+            flex-basis: calc(100% /  2.5);
+            width: calc(100% /  2.5);
+        }
+    }
+
+    .grid--md-third {
+        flex-basis: calc(100% / 3 - (.6666666em * #{$gutter}));
+        width: calc(100% / 3 - (.6666666em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 3);
+            width: calc(100% / 3);
+        }
+    }
+
+    .grid--md-fourth {
+        flex-basis: calc(100% / 4 - (.75em * #{$gutter}));
+        width: calc(100% / 4 - (.75em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 4);
+            width: calc(100% / 4);
+        }
+    }
+
+    .grid--md-fifth {
+        flex-basis: calc(100% / 5 - (.8em * #{$gutter}));
+        width: calc(100% / 5 - (.8em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 5);
+            width: calc(100% / 5);
+        }
+    }
+
+    .grid--md-sixth {
+        flex-basis: calc(100% / 6 - (.85em * #{$gutter}));
+        width: calc(100% / 6 - (.85em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
+        }
+    }
+
+    .grid--md-ninth {
+        flex-basis: calc(100% / 9 - (.55em * #{$gutter}));
+        width: calc(100% / 9 - (.55em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 9);
+            width: calc(100% / 9);
+        }
+    }
+
+    .grid--md-tenth {
+        flex-basis: calc(100% / 10 - (.55em * #{$gutter}));
+        width: calc(100% / 10 - (.55em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 10);
+            width: calc(100% / 10);
         }
     }
 }
@@ -466,132 +523,117 @@
 
 @include media($screen-lg) {
     .grid--lg-one {
-        box-sizing: border-box;
-        max-width: 100%;
         flex-basis: 100%;
         width: 100%;
     }
 
-    .grid--lg-two-thirds {
-        box-sizing: border-box;
-        max-width: 63.466%;
-        flex-basis: 63.466%;
-        width: 63.466%;
+    .grid--lg-four-fifths {
+        flex-basis: calc(100% / 1.25 - (.2em * #{$gutter}));
+        width: calc(100% / 1.25 - (.2em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 66.66%;
-            flex-basis: 66.66%;
-            width: 66.66%;
+            flex-basis: calc(100% /  1.25);
+            width: calc(100% /  1.25);
+        }
+    }
+
+    .grid--lg-three-fourths {
+        flex-basis: calc(75% - (.25em * #{$gutter}));
+        width: calc(75% - (.25em * #{$gutter}));
+
+        &.nog {
+            flex-basis: 75%;
+            width: 75%;
+        }
+    }
+
+    .grid--lg-two-thirds {
+        flex-basis: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+        width: calc(100% / 1.5 - (.3333333em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% / 1.5);
+            width: calc(100% / 1.5);
+        }
+    }
+
+    .grid--lg-three-fifths {
+        flex-basis: calc(100% / 1.666666 - (.4em * #{$gutter}));
+        width: calc(100% / 1.666666 - (.4em * #{$gutter}));
+
+        &.nog {
+            flex-basis: calc(100% /  1.666666);
+            width: calc(100% /  1.666666);
         }
     }
 
     .grid--lg-half {
-        box-sizing: border-box;
-        max-width: 48.5%;
-        flex-basis: 48.5%;
-        width: 48.5%;
+        flex-basis: calc(100% / 2 - (.5em * #{$gutter}));
+        width: calc(100% / 2 - (.5em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 50%;
-            flex-basis: 50%;
-            width: 50%;
-        }
-    }
-
-    .grid--lg-third {
-        box-sizing: border-box;
-        max-width: 31.733%;
-        flex-basis: 31.733%;
-        width: 31.733%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 33.333%;
-            flex-basis: 33.333%;
-            width: 33.333%;
-        }
-    }
-
-    .grid--lg-two-thirds {
-        box-sizing: border-box;
-        max-width: 65.866%;
-        flex-basis: 65.866%;
-        width: 65.866%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 66.66%;
-            flex-basis: 66.66%;
-            width: 66.66%;
-        }
-    }
-
-    .grid--lg-fourth {
-        box-sizing: border-box;
-        max-width: 23.8%;
-        flex-basis: 23.8%;
-        width: 23.8%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 25%;
-            flex-basis: 25%;
-            width: 25%;
-        }
-    }
-
-    .grid--lg-fifth {
-        box-sizing: border-box;
-        max-width: 19.04%;
-        flex-basis: 19.04%;
-        width: 19.04%;
-
-        &.nog {
-            box-sizing: border-box;
-            max-width: 20%;
-            flex-basis: 20%;
-            width: 20%;
+            flex-basis: calc(100% / 2);
+            width: calc(100% / 2);
         }
     }
 
     .grid--lg-two-fifths {
-        box-sizing: border-box;
-        max-width: 40%;
-        flex-basis: 40%;
-        width: 40%;
+        flex-basis: calc(100% / 2.5 - (.6em * #{$gutter}));
+        width: calc(100% / 2.5 - (.6em * #{$gutter}));
 
         &.nog {
-            box-sizing: border-box;
-            max-width: 40%;
-            flex-basis: 40%;
-            width: 40%;
+            flex-basis: calc(100% /  2.5);
+            width: calc(100% /  2.5);
         }
     }
-}
 
+    .grid--lg-third {
+        flex-basis: calc(100% / 3 - (.6666666em * #{$gutter}));
+        width: calc(100% / 3 - (.6666666em * #{$gutter}));
 
-.max-wrap {
-    @include media($screen-xs) {}
-
-
-    @include media($screen-sm) {
-        max-width: map-get($max-width, sm);
+        &.nog {
+            flex-basis: calc(100% / 3);
+            width: calc(100% / 3);
+        }
     }
 
+    .grid--lg-fourth {
+        flex-basis: calc(100% / 4 - (.75em * #{$gutter}));
+        width: calc(100% / 4 - (.75em * #{$gutter}));
 
-    @include media($screen-md) {
-        max-width: 80vw;
+        &.nog {
+            flex-basis: calc(100% / 4);
+            width: calc(100% / 4);
+        }
     }
 
+    .grid--lg-fifth {
+        flex-basis: calc(100% / 5 - (.8em * #{$gutter}));
+        width: calc(100% / 5 - (.8em * #{$gutter}));
 
-    @include media($screen-lg) {}
+        &.nog {
+            flex-basis: calc(100% / 5);
+            width: calc(100% / 5);
+        }
+    }
 
+    .grid--lg-sixth {
+        flex-basis: calc(100% / 6 - (.85em * #{$gutter}));
+        width: calc(100% / 6 - (.85em * #{$gutter}));
 
-    @include media($screen-xl) {}
+        &.nog {
+            flex-basis: calc(100% / 6);
+            width: calc(100% / 6);
+        }
+    }
 
+    .grid--lg-ninth {
+        flex-basis: calc(100% / 9 - (.55em * #{$gutter}));
+        width: calc(100% / 9 - (.55em * #{$gutter}));
 
-    margin-left: auto;
-    margin-right: auto;
+        &.nog {
+            flex-basis: calc(100% / 9);
+            width: calc(100% / 9);
+        }
+    }
 }

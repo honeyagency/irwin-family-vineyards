@@ -23,6 +23,10 @@ tec:
     cents:
 image: /assets/images/images/bottle--the-bull.jpg
 price:
+cost:
+    club: $14.70
+    case: $239.0
+    regular: $21.00
 club:
 techsheet:
 ---

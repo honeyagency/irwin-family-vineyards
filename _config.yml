@@ -25,6 +25,6 @@ exclude:
   - _sass
 
 collections:    
-  wine:
+  product:
     output: true
     

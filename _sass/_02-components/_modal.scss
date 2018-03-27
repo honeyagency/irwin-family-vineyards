@@ -1,13 +1,20 @@
-#v65-modalContainer, .v65-modalCartSelected {
+#v65-modalContainer, #v65-modalCart {
     width: 70vw;
     position: fixed;
     top: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(0%) translateX(-50%);
     left: 50%;
     padding: 1em 2em;
     background-color: map-get($brown, light);
     z-index: 99;
     max-width: 500px;
+    top: 110%;
+    transition: 0.3s top $base-animation 0.3s transform $base-animation;
+
+    &.v65-modalCartSelected {
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+    }
 
     #{$all-text-inputs} {
         width: 100% !important;
@@ -70,6 +77,71 @@
         &:last-of-type {
             a {
                 display: none;
+            }
+        }
+    }
+}
+
+#v65-modalCartBody {
+    p {
+        &.right {
+            &:first-of-type {
+                a {
+                    float: right;
+                    text-transform: uppercase;
+
+                    @extend .font--sans;
+
+                    font-size: .8rem;
+                    top: 1em;
+                    position: absolute;
+                    right: 1em;
+                }
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+                margin-top: 2em;
+
+                .modalLinkAltBtn, .modalLinkBtn {
+                    background-color: $black;
+                    color: white;
+
+                    @extend .font--sans;
+
+                    line-height: $base-line-height;
+                    -webkit-font-smoothing: antialiased;
+
+                    @extend .button;
+
+                    font-weight: 100;
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    #v65-modalCartTable {
+        width: 100%;
+
+        tr {
+            &:first-of-type {
+                background-color: $black;
+                color: white;
+
+                @extend .font--sans;
+
+                text-align: center;
+            }
+
+            th {
+                text-align: center !important;
+                padding: 5px 0;
+            }
+
+            td {
+                vertical-align: middle !important;
+                padding: 5px 0;
             }
         }
     }

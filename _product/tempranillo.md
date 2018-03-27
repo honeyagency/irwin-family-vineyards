@@ -31,6 +31,10 @@ tec:
     cents: "I grew this little beauty about fifteen years ago. It blew my mind, and has consistently been blowing my mind since. Try this, it’s a game changer."
 image: '/assets/images/images/bottle--tempranillo.jpg'
 price: $28.00
+cost:
+    club: $19.60
+    case: $319.20
+    regular: $28.00
 club: true
 techsheet:
 ---

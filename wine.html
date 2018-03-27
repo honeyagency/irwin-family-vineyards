@@ -13,9 +13,15 @@ layout: default
 			<div class="grid--one grid--sm-three-fourths spacing--horiz-1 spacing--dsk-horiz-2 wines--wine">
 				<h3 class="font--kp condensed text--uppercase color--red-dark wine--title">{{wine.title}}</h3>
 				<p class="font--sans font--medium spacing--vert-1">{{wine.blurb}}</p>
-				<a href="{{wine.link}}" class="button inline smaller font--sans grid--one active color--black font--large">Buy Wine</a>
+				<table class="font--sans" cellpadding="0">
+				<tr><td style="padding-right: 15px;">Club Price</td><td>{{wine.cost.club}}</td></tr>
+				<tr><td style="padding-right: 15px;">Case Price</td><td>{{wine.cost.case}}</td></tr>
+				<tr><td style="padding-right: 15px;">Regular Price</td><td>{{wine.cost.regular}}</td></tr>
+				</table>
+				<br>
+				<a href="{{wine.link}}" class="button inline smaller font--sans grid--one active color--white font--large">Buy Wine</a>
 			</div>
 		</section>
 	{% endfor %}
-	<section class="flex flex-wrap spacing--vert-2 align--center grid--one grid--sm-half justify--around"></section>
+<section class="flex flex-wrap spacing--vert-2 align--center grid--one grid--sm-half justify--around"></section>
 </section>

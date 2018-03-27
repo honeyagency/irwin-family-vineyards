@@ -59,7 +59,7 @@ h1 {
 }
 
 h2 {
-    font-size: $h2;
+    font-size: 2rem;
     letter-spacing: 1.7px;
     line-height: 1;
 }
@@ -237,33 +237,55 @@ hr {
     }
 }
 
-// .wf-loading {
-//     body {
-//         font-size: 1.2rem;
-//         letter-spacing: -1px;
-//     }
+.wf-loading {
 
-//     h1, h2, h3, h4, h5, h6 {
-//         letter-spacing: -1.3px;
-//     }
+    @include media($screen-sm) {
+    .bg--image {
+        .font--larger {
+            // font-family: sans-serif;
+            letter-spacing: 1.5px;
+            font-size: 2.3em;
+        }
 
-//     h2 {
-//         font-size: 2.65rem;
-//     }
+        h1 {
+            // font-family: serif;
+            font-size: 10.6em;
+            font-weight: 900;
+            margin-top: -32px;
+            letter-spacing: -1px;
+            margin-bottom: -38px;
+        }
 
-//     h3 {
-//         font-size: 1.6rem;
-//     }
+        &.wine {
+            h1 {
+                font-size: 8.6em;
+            }
+        }
+    }
 
-//     .content-list {
-//         a {
-//             letter-spacing: -1px;
-//         }
-//     }
-//     .letter--1{
-//         letter-spacing: inherit;
-//     }
-// }
+    .font--sans {
+        letter-spacing: 0.4px;
+    }
+}
+
+    // h1, h2, h3, h4, h5, h6 {
+    //     letter-spacing: -1.3px;
+    // }
+
+    // h2 {
+    //     font-size: 2.65rem;
+    // }
+
+    // h3 {
+    //     font-size: 1.6rem;
+    // }
+
+    // body {
+    //     font-size: 1.2rem;
+    //     letter-spacing: -1px;
+    // }
+}
+
 p.small {
     font-size: .8rem;
 }

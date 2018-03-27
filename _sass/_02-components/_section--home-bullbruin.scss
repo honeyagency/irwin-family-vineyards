@@ -1,0 +1,13 @@
+.section--home-bullbruin {
+    @include media($max-md) {
+        @include media($screen-sm) {
+            align-items: start;
+
+            .block--home-wine {
+                top: -8em;
+                position: relative;
+                margin-bottom: -8em;
+            }
+        }
+    }
+}

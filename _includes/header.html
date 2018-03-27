@@ -1,20 +1,19 @@
 <header id="header" class="spacing--gutter">
 <section class="section--header-wrap flex flex-wrap align--center">
-	<a class="logo--link mobile--hide" href="{{site.url}}/"><i class="icon-logo" data-grunticon-embed></i></a>
+	<a class="logo--link mobile--hide" href="{{site.url}}/"><i class="{% if page.bg == 'maroon' %}icon-logo--filled{%else%}icon-logo{% endif %}" data-grunticon-embed></i></a>
 	<nav>
 		<ul class="mar-no font--medium">
-			<li><a href="/meet-our-family.html" class="color--black" title="Meet Our Family">Meet Our Family</a></li>
-			<li><a href="/wine.html" class="color--black" title="Shop Our Wines">Shop Our Wines</a></li>
-			<li><a href="/wine-club.html" class="color--black" title="Join Our Wine Club">Join Our Wine Club</a></li>
-			<li><a href="/the-spanish-life.html" class="color--black" title="The Spanish Life">The Spanish Life</a></li>
-			<li><a href="" class="color--black mobile--hide" title="Cart">Cart <i class="icon-cart" data-grunticon-embed></i></a></li>
+			<li class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %}"><a href="/meet-our-family.html" class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %}" title="Meet Our Family">Meet Our Family</a></li>
+			<li class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %}"><a href="/wine.html" class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %}" title="Shop Our Wines">Shop Our Wines</a></li>
+			<li class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %}"><a href="/the-spanish-life.html" class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %}" title="The Spanish Life">The Spanish Life</a></li>
+			<li class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %}"><a href="" class="{% if page.bg == 'maroon' %}color--brown-light{%else%}color--black{% endif %} mobile--hide" title="Cart">Cart</a></li>
 		</ul>
 	</nav>
 	<span class="trigger--nav-wrap dsk--hide">
 		<label class="trigger--nav">Menu</label>
 	</span>
-	<i class="icon-bison dsk--hide" data-grunticon-embed></i>
-	<i class="icon-cart dsk--hide" data-grunticon-embed></i>
+	<a href="/" class="icon-bison-wrap dsk--hide"><i class="icon-bison dsk--hide" data-grunticon-embed></i></a>
+	<a class="mobile--cart dsk--hide" href="/Cart"><i class="icon-cart dsk--hide" data-grunticon-embed></i></a>
 	</section>
 	<hr class="double grid--one">
 </header>

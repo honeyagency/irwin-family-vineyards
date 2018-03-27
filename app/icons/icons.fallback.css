@@ -4,7 +4,11 @@
 
 .icon-cart { background-image: url('app/icons/cart.png'); background-repeat: no-repeat; }
 
+.icon-logo--filled { background-image: url('app/icons/logo--filled.png'); background-repeat: no-repeat; }
+
 .icon-logo { background-image: url('app/icons/logo.png'); background-repeat: no-repeat; }
+
+.icon-signature { background-image: url('app/icons/signature.png'); background-repeat: no-repeat; }
 
 .icon-social--facebook { background-image: url('app/icons/social--facebook.png'); background-repeat: no-repeat; }
 

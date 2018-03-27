@@ -7,7 +7,7 @@
     @include media($screen-md) {
         padding: 0.7em 1em;
         font-size: 1.5rem;
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
     }
 
 
@@ -39,6 +39,10 @@
     &.smaller {
         padding: 0.5em 0.8em;
     }
+
+    &.outline--red {
+        border: 1px solid map-get($red, maroon);
+    }
 }
 
 .largeBtn {
@@ -55,7 +59,8 @@
 
     font-size: 1em;
 }
-.modalBtn{
-        background-color: $black;
+
+.modalBtn {
+    background-color: $black;
     color: white;
 }

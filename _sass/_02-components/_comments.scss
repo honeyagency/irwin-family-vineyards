@@ -1,0 +1,43 @@
+.v65-blogCommentsTitle {
+    @extend .font--kp;
+
+    @extend h3;
+
+    margin-top: 2em;
+}
+
+.v65-commentWrapper {
+    border: 1px solid rgba(41, 31, 39, 0.2);
+    padding: 0.6em 1em;
+    box-shadow: -3px 0px 0px rgba(0, 0, 0, 0.53);
+    border-left: none;
+
+    .v65-avatar {}
+
+    .v65-clear {
+        display: none;
+    }
+
+    .v65-comment {
+        .v65-commentName {
+            @extend .font--sans;
+
+            letter-spacing: 0.7px;
+            text-transform: uppercase;
+            font-weight: 400 !important;
+        }
+
+        .v65-commentDate {}
+
+        .v65-commentText {
+            p {
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    margin-bottom: 1em;
+    margin-top: 1em;
+}

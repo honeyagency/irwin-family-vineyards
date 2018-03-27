@@ -26,6 +26,10 @@ tec:
     cents:
 image: /assets/images/images/bottle--the-mix.png
 price:
+cost:
+    club: $11.20
+    case: $182.40
+    regular: $16.00
 club:
 techsheet:
 ---

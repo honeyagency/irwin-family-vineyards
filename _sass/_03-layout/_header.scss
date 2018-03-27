@@ -1,14 +1,17 @@
 header {
-    padding-top: 1em;
+    position: relative;
+    padding-top: 0.2em;
     padding-bottom: 0.1em;
 
-    .icon-logo {
+    @include media($screen-sm) {
+        padding-top: 1em;
+    }
+
+
+    .icon-logo, .icon-logo--filled {
         margin-bottom: 0.5em;
         width: 290px;
         height: 18px;
-
-        @include media($screen-sm) {}
-
 
         @include media($screen-md) {
             width: 240px;

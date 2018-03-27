@@ -21,20 +21,20 @@
     }
 
     &.header {
-        min-height: 380px;
+        height: 250px;
 
         @include media($screen-sm) {
-            min-height: 380px;
+            height: 380px;
         }
 
 
         @include media($screen-md) {
-            min-height: 500px;
+            height: 500px;
         }
 
 
         @include media($screen-lg) {
-            min-height: 580px;
+            height: 580px;
         }
 
 
@@ -68,6 +68,14 @@
             width: 100%;
             background-color: transparentize(black, 0.75);
             z-index: 0;
+        }
+
+        @include media($max-sm) {
+            h1 {
+                font-size: 3rem;
+                margin-top: 3px;
+                margin-bottom: -10px;
+            }
         }
     }
 
@@ -127,7 +135,7 @@
 }
 
 .bg--bull {
-    background-image: url("/app/images/bg--bull.png");
+    background-image: url("/assets/images/images/bg--bull.png");
     background-position: center;
     background-size: 10em;
     background-repeat: no-repeat;
@@ -136,4 +144,10 @@
 .margin--center {
     margin: 0 auto;
     display: block;
+}
+
+.no--bg-mob {
+    @include media($max-sm) {
+        background-image: none !important;
+    }
 }

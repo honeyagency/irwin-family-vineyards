@@ -2,7 +2,7 @@
 <html>
   {% include head.html %}
   
-  <body class="bg--brown layout--{{page.layout}}">
+  <body class="{% if page.bg == 'maroon' %}bg--maroon{%else%}bg--brown{% endif %} layout--{{page.layout}} {{page.class}}">
     {% include header.html %}
     <main class="">
     {{ content }}

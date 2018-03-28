@@ -6,8 +6,9 @@
     //      &:first-of-type{
     // left: 0;
     //      }
-    //  }   
+    //  }
     text-align: center;
+
     @include media($screen-md) {
         min-height: 75vh;
     }
@@ -23,17 +24,23 @@
 
     @include media($max-xs) {}
 
-    
 
     @include media($max-md) {
         padding-bottom: 10em;
         padding-top: 10em;
     }
+
+
     @include media($max-sm) {
-         padding-bottom:2.5em;
+        padding-bottom: 2.5em;
         padding-top: 2.5em;
     }
 
 
-    @include media($max-lg) {}
+    @include media($max-lg) {
+        .celebrate {
+            font-size: 1.7em;
+            margin-bottom: 0.2em;
+        }
+    }
 }

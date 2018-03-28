@@ -1,13 +1,32 @@
 .section--home-bullbruin {
-    @include media($max-md) {
-        @include media($screen-sm) {
-            align-items: start;
+    // @include media($max-sm) {
+    //     @include media($screen-sm) {
+    //         align-items: start;
 
-            .block--home-wine {
-                top: -8em;
-                position: relative;
-                margin-bottom: -8em;
+    //         .block--home-wine {
+    //             top: -8em;
+    //             position: relative;
+    //             margin-bottom: -8em;
+    //         }
+    //     }
+    // }
+    // @include media($max-xs){}
+    .block--home-wine {
+        @include media($max-xl) {
+            .font--large {
+                font-size: 1.1em;
             }
         }
+
+
+        @include media($max-md) {
+            &:first-of-type {
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+    @include media($max-xs) {
+        text-align: center;
     }
 }

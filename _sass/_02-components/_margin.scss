@@ -10,13 +10,17 @@
     }
 }
 
+.margin--bot-half {
+    margin-bottom: .5em;
+}
+
 .margin--bot-1 {
     margin-bottom: 1em;
 }
 
 .margin--bot-2 {
-margin-bottom: 1em;
-	
+    margin-bottom: 1em;
+
     @include media($screen-sm) {
         margin-bottom: 2em;
     }

@@ -1,6 +1,19 @@
 .section--header-wrap {
-  
     justify-content: space-between;
+
+    nav {
+        ul {
+            // @extend .marno;
+
+            @extend .font--medium;
+
+            li {
+                a {
+                    @extend .color--brown-light;
+                }
+            }
+        }
+    }
 
     @include media($screen-sm) {
         justify-content: center;
@@ -29,6 +42,7 @@
         nav {
             ul {
                 // font-size: 1rem;
+           
             }
         }
     }
@@ -38,6 +52,7 @@
         nav {
             ul {
                 // font-size: inherit;
+           
             }
         }
     }

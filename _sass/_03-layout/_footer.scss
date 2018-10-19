@@ -1,3 +1,13 @@
-footer{
-	position: relative;
+footer {
+    position: relative;
+
+    .sub-footer {
+        a {
+            font-size: .9rem;
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
 }
